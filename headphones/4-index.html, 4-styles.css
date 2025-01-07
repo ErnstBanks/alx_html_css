@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Header/Hero Section</title>
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Welcome to Our Website</h1>
+            <p class="hero-subtitle">Building a web page the right way, is not easy.</p>
+            <a href="#learn-more" class="hero-button">Learn More</a>
+        </div>
+    </header>
+    <section class="what-we-do">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <div class="services">
+                <div class="service">
+                    <i class="favicon.jpg"></i> <!-- Replace with your actual icon class -->
+                    <h3 class="service-title">Favicon 1</h3>
+                    <p class="service-description">Description of service 1.</p>
+                </div>
+                <div class="service">
+                    <i class="favicon2.jpg"></i> <!-- Replace with your actual icon class -->
+                    <h3 class="service-title">Favicon 2</h3>
+                    <p class="service-description">Description of service 2.</p>
+                </div>
+                <div class="service">
+                    <i class="pentagone.jpg"></i> <!-- Replace with your actual icon class -->
+                    <h3 class="service-title">Favicon 3</h3>
+                    <p class="service-description">Description of service 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="our-results">
+        <div class="container">
+            <h2 class="section-title">Our Results</h2>
+            <div class="results">
+                <div class="result">
+                    <i class="icon icon-result1"></i> <!-- Replace with your actual icon class -->
+                    <h3 class="result-title">Result 1</h3>
+                    <p class="result-description">Description of result 1.</p>
+                </div>
+                <div class="result">
+                    <i class="icon icon-result2"></i> <!-- Replace with your actual icon class -->
+                    <h3 class="result-title">Result 2</h3>
+                    <p class="result-description">Description of result 2.</p>
+                </div>
+                <div class="result">
+                    <i class="icon icon-result3"></i> <!-- Replace with your actual icon class -->
+                    <h3 class="result-title">Result 3</h3>
+                    <p class="result-description">Description of result 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name" />
+                    <span class="error-message">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email" />
+                    <span class="error-message">Please enter a valid email.</span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    <span class="error-message">Please enter a message.</span>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#what-we-do">What We Do</a>
+                    <a href="#our-results">Our Results</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="facebook.jpg"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="icon icon-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="icon icon-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Headphones. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+     
+</body>
+</html>
+
+/* styles.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #FF6565;
+    --button-opacity: 0.9;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-image: url('headphones_hero_1.jpg'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+/* Title */
+.hero-title {
+    font-size: 2.5em;
+    color: white;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 1.2em;
+    color: white;
+    margin: 10px 0;
+}
+
+/* Button */
+.hero-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+}
+
+.hero-button:hover,
+.hero-button:active {
+    opacity: var(--button-opacity);
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8em;
+    }
+    .hero-subtitle {
+        font-size: 1em;
+    }
+}
+/* What We Do Section */
+.what-we-do {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    background-image: url('favicon.jpg'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Services */
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.service {
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 300px; /* Optional max width */
+    margin: 20px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 3em; /* Adjust icon size */
+    color: var(--primary-color); /* Use primary color variable */
+    margin-bottom: 10px;
+}
+
+.service-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.service-description {
+    font-size: 1em;
+    color: #666; /* Darker gray for description */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .service {
+        flex: 1 1 100%; /* Full width on mobile */
+        margin: 10px 0;
+    }
+}
+/* Our Results Section */
+.our-results {
+    padding: 50px 0;
+    background-color: #ffffff; /* Different background for contrast */
+    text-align: center;
+}
+
+.results {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.result {
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 300px; /* Optional max width */
+    margin: 20px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 3em; /* Adjust icon size */
+    color: var(--primary-color); /* Use primary color variable */
+    margin-bottom: 10px;
+}
+
+.result-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.result-description {
+    font-size: 1em;
+    color: #666; /* Darker gray for description */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .result {
+        flex: 1 1 100%; /* Full width on mobile */
+        margin: 10px 0;
+    }
+}
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background-color: #f0f0f0; /* Light background for contrast */
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 0.9em;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/* Animations */
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input:valid, textarea:valid {
+    border-color: green;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 0 10px;
+    }
+}
+/* Footer Section */
+.footer {
+    background-color: #333; /* Dark background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer-links, .footer-socials {
+    margin: 10px 0;
+}
+
+.footer-links a, .footer-socials a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover, .footer-socials a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column; /* Stack links vertically on mobile */
+    }
+
+    .footer-links, .footer-socials {
+        margin: 5px 0;
+    }
+}
